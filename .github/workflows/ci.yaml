@@ -1,0 +1,15 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: purescript-contrib/setup-purescript@main
+
+      - run: spago build
+
+      - run: spago -x test.dhall test
