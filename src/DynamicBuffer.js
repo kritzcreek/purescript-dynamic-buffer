@@ -30,7 +30,7 @@ exports.toStringImpl = function(array) {
   return "[" + numbers.join(", ") + "]";
 };
 
-exports.encode_utf8 = function(s) {
+exports.encodeUtf8 = function(s) {
   let te = new TextEncoder();
   return te.encode(s)
 };
