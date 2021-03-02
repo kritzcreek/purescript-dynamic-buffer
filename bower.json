@@ -11,11 +11,12 @@
         "**/.*",
         "node_modules",
         "bower_components",
+        ".spago",
         "output"
     ],
     "dependencies": {
-        "purescript-arraybuffer-types": "^v2.0.0",
-        "purescript-effect": "^v2.0.1",
-        "purescript-refs": "^v4.1.0"
+        "purescript-arraybuffer-types": "^v3.0.0",
+        "purescript-effect": "^v3.0.0",
+        "purescript-refs": "^v5.0.0"
     }
 }
