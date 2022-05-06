@@ -1,1 +1,3 @@
-exports.arrayViewToArray = x => Array.from(x);
+export function arrayViewToArray(x) {
+    return Array.from(x)
+};
