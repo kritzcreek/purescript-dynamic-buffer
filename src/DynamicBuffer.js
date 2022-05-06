@@ -1,41 +1,41 @@
-exports.lengthImpl = function(array) {
+export function lengthImpl(array) {
   return array.length;
 };
 
-exports.setImpl = function(array, offset, x) {
+export function setImpl(array, offset, x) {
   array[offset] = x;
 };
 
-exports.setAllImpl = function(array, offset, xs) {
+export function setAllImpl(array, offset, xs) {
   array.set(xs, offset);
 };
 
-exports.allocate = function(size) {
+export function allocate(size) {
   return new Uint8Array(size);
 };
 
-exports.subarray = function(array, offset, length) {
+export function subarray(array, offset, length) {
   return array.subarray(offset, length);
 };
 
-exports.whenE = function(pred, action) {
+export function whenE(pred, action) {
   if (pred) {
     action();
   }
 };
 
-exports.toStringImpl = function(array) {
+export function toStringImpl(array) {
   let numbers = [];
   array.forEach(b => numbers.push("0x" + b.toString(16).toUpperCase()));
   return "[" + numbers.join(", ") + "]";
 };
 
-exports.encodeUtf8 = function(s) {
+export function encodeUtf8(s) {
   let te = new TextEncoder();
   return te.encode(s)
 };
 
-exports.throwImpl = function(s) {
+export function throwImpl(s) {
   return function () {
     throw new Error(s);
   };

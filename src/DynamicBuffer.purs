@@ -91,7 +91,7 @@ addByte b@(DBuffer buf) x = do
 -- |   Debug.traceM =<< DBuffer.contents b1 -- Uint8Array(3) [ 10, 20, 30 ]
 -- | ```
 addBuffer :: DBuffer -> DBuffer -> Effect Unit
-addBuffer b@(DBuffer buf) x@(DBuffer xb) = do
+addBuffer b@(DBuffer buf) (DBuffer xb) = do
   xbPosition <- Ref.read xb.position
   bufPosition <- Ref.read buf.position
   bufLen <- Ref.read buf.capacity
